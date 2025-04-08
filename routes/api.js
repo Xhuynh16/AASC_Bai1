@@ -32,8 +32,7 @@ async function callBitrixApi(action, payload = {}) {
 router.get('/contacts', async (req, res) => {
     try {
         const result = await callBitrixApi('crm.contact.list', {
-            select: ['ID', 'NAME', 'EMAIL'],
-            filter: { NAME: 'Hùng' }
+            select: ['ID', 'NAME', 'EMAIL']
         });
         res.json(result);
     } catch (error) {

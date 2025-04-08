@@ -172,7 +172,7 @@ Server running on port 3000
     }
     ```
   - Nếu token hết hạn, ứng dụng sẽ tự động làm mới token và thử lại, sau đó trả về kết quả như trên.
-  - Nếu không có contacts nào khớp với bộ lọc (NAME: 'Test%'), bạn sẽ nhận được mảng rỗng:
+  - Nếu không có contacts nào trên Bitrix24, bạn sẽ nhận được mảng rỗng:
     ```json
     { "result": [], "total": 0, "time": { ... } }
     ```
@@ -246,7 +246,7 @@ Server running on port 3000
     - Nhấn **Reinstall** trên Bitrix24 để áp dụng thay đổi.
 
 - **Lưu trữ token**:
-  - Token hiện được lưu trong file `tokens.json`. Trong môi trường production, bạn nên lưu vào database (như MongoDB) và mã hóa token.
+  - Token hiện được lưu trong file `tokens.json`.
 
 - **Quyền truy cập**:
   - Đảm bảo ứng dụng cục bộ trên Bitrix24 có đủ quyền (crm, user) để gọi API như `crm.contact.list`. 
